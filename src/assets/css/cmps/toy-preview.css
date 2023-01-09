@@ -1,0 +1,41 @@
+.toy-preview {
+  border: 1px solid rgba(0, 0, 0, 0.116);
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  position: relative;
+}
+.toy-prev-meta {
+  padding: 0 1em;
+}
+.toy-prev-img {
+  margin: 0 auto 1em;
+}
+.toy-prev-labels {
+  margin-top: 1em;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
+/* .toy-prev-labels .tag
+.tag {
+  background-color: ;
+} */
+.tag.label {
+  bottom: 0;
+  top: unset;
+}
+.tag.stock {
+  bottom: unset;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: green;
+  color: white;
+}

@@ -14,15 +14,25 @@ export const toyService = {
   getDefaultFilter,
 }
 
-const labels = ['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle', 'Outdoor', 'Battery Powered']
+const labels = [
+  'On wheels',
+  'Box game',
+  'Art',
+  'Baby',
+  'Doll',
+  'Puzzle',
+  'Outdoor',
+  'Battery Powered',
+]
 
-function getEmptyToy(name = 'Unnamed Toy', price = 123 , labels , inStock = true) {
+function getEmptyToy(name = 'Unnamed Toy', price = 123, labels, inStock = true, imgUrl) {
   return {
     name,
     price,
     labels,
-    inStock
-}
+    inStock,
+    imgUrl,
+  }
 }
 
 function getDefaultFilter() {
@@ -64,20 +74,23 @@ function _createToys() {
   let toys = localStorageService.loadFromStorage(TOY_KEY) || []
   if (!toys || !toys.length) {
     toys = []
-    toys.push(_createToy('Piggy', 140 , ['Baby' , 'Doll'] , true))
-    toys.push(_createToy('Soldier', 130 , ['Puzzle' , 'Doll' , 'Outdoor'] , true))
-    toys.push(_createToy('Gun', 165 , ['Baby' , 'Doll'] , true))
-    toys.push(_createToy('Alphabet cubes', 170 , ['Outdoor', 'Battery Powered', 'Doll'] , true))
-    toys.push(_createToy('Beach ball', 125 , ['Outdoor' , 'Baby', 'Battery Powered'] , true))
-    toys.push(_createToy('Doll', 270 , ['Puzzle' , 'Doll'] , true))
-    toys.push(_createToy('Unicorn', 150 , ['Puzzle' , 'Battery Powered', 'Outdoor'] , true))
+    toys.push(_createToy('Tank', 120, ['Baby', 'Doll'], true, '1.png'))
+    toys.push(_createToy('Piggy', 140, ['Baby', 'Doll'], true, '2.png'))
+    toys.push(_createToy('Camera', 130, ['Puzzle', 'Doll', 'Outdoor'], true, '3.png'))
+    toys.push(_createToy('Gun', 165, ['Baby', 'Doll'], true, '4.png'))
+    toys.push(
+      _createToy('Alphabet cubes', 170, ['Outdoor', 'Battery Powered', 'Doll'], true, '5.png')
+    )
+    toys.push(_createToy('Beach ball', 125, ['Outdoor', 'Baby', 'Battery Powered'], true, '6.png'))
+    toys.push(_createToy('Doll', 270, ['Puzzle', 'Doll'], true, '7.png'))
+    toys.push(_createToy('Plall', 120, ['Puzzle', 'Doll'], true, '8.png'))
 
     localStorageService.saveToStorage(TOY_KEY, toys)
   }
 }
 
-function _createToy(name , price , labels , inStock) {
-  const toy = getEmptyToy(name, price, labels , inStock)
+function _createToy(name, price, labels, inStock, imgUrl) {
+  const toy = getEmptyToy(name, price, labels, inStock, imgUrl)
   toy._id = utilService.makeId()
   return toy
 }

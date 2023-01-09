@@ -1,0 +1,29 @@
+.toy-list {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25em;
+}
+.toy-li {
+  position: relative;
+  overflow: hidden;
+}
+.toy-actions-btns {
+  position: absolute;
+  top: -0.5em;
+  left: 0.5em;
+  opacity: 0;
+  transition: opacity 0.2s 0.1s, top 0.3s;
+}
+.toy-actions-btns > button {
+  background-color: #ffd000;
+  border-radius: 4px;
+  margin-inline-end: 0.25em;
+}
+.toy-actions-btns > button:hover {
+  background-color: #f7e38e;
+}
+.toy-li:hover .toy-actions-btns {
+  top: 0.5em;
+  opacity: 1;
+}

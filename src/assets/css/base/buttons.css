@@ -18,26 +18,21 @@ button:hover {
 
 /* square-round btns */
 
-.btn-outline {
-  transition: color 0.2s 0s, border 0.2s 0s;
+.btn-primary {
+  transition: color 0.2s 0s, background 0.2s 0s;
   border-radius: 50em;
   padding: 0.6em 1.8em;
-  border: 2px solid var(--clr1);
-  color: var(--clr1);
+  background: var(--clr1);
+  color: var(--clr-bg-con);
   font-weight: 600;
   /* text-transform: uppercase; */
   letter-spacing: 0.05em;
 }
-.btn-outline:hover {
-  border: 2px solid var(--clr-txt-con);
-  color: var(--clr-txt-con);
+.btn-primary:hover {
+  background: var(--clr1-hover);
+  color: var(--clr-bg-con);
 }
 
-.btn-primary {
-  transition: color 0.3s, background 0.3s;
-  background-color: var(--clr1);
-  box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.3);
-}
 .btn-secondary {
   background-color: var(--clrbg-light);
 }

@@ -2,9 +2,9 @@
 .tag {
   font-size: 0.8rem;
   background-color: var(--gray4);
-  padding: 0.25em 0.35em;
+  padding: 0.25em 0.5em;
   border-radius: 0.25em;
-  color: var(--clr1);
+  background-color: var(--clr1);
 }
 .tag.serious-tag {
   font-weight: 300;
