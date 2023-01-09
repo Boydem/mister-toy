@@ -1,0 +1,23 @@
+/* TAGS STYLES */
+.tag {
+  font-size: 0.8rem;
+  background-color: var(--gray4);
+  padding: 0.25em 0.35em;
+  border-radius: 0.25em;
+  color: var(--clr1);
+}
+.tag.serious-tag {
+  font-weight: 300;
+  background-color: rgb(202, 69, 69);
+  color: var(--clr1);
+}
+.tag.descent-tag {
+  font-weight: 300;
+  background-color: rgb(204, 152, 54);
+  color: var(--clr1);
+}
+.tag.light-tag {
+  font-weight: 300;
+  background-color: rgb(136, 177, 42);
+  color: var(--clr1);
+}

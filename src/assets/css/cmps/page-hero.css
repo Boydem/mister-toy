@@ -1,0 +1,25 @@
+.page-hero .wrapper {
+  display: flex;
+  align-items: center;
+}
+.page-hero {
+  background-color: var(--clr-bg-con);
+}
+.hero-img {
+  margin: -2em;
+  align-self: flex-end;
+  filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.315));
+}
+.hero-img-container {
+  flex-basis: 60%;
+}
+.hero-txt-container {
+  padding: 1em;
+  flex-basis: 40%;
+}
+.page-hero .wrapper p {
+  color: var(--clr-txt-con-m);
+}
+.page-hero .wrapper h2 {
+  color: var(--clr-txt-con);
+}

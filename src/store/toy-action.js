@@ -39,7 +39,7 @@ export function saveToy(toy) {
       return savedToy
     })
     .catch((err) => {
-      if (type === UPDATE_TOY) store.dispatch({ type: UNDO_UPDATE_TOY, toy: savedToy })
+      if (type === UPDATE_TOY) store.dispatch({ type: UNDO_UPDATE_TOY, toy })
       console.error('Cannot save toy:', err)
       throw err
     })

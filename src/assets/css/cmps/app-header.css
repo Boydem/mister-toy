@@ -1,0 +1,33 @@
+.app-header {
+  background-color: var(--clr1);
+  position: sticky;
+  top: 0;
+}
+.app-header .wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  margin: -1em auto;
+  padding: 0 2em;
+}
+.app-logo {
+  height: 140px;
+  margin-bottom: -3em;
+}
+.app-logo {
+  filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.274));
+}
+.main-nav {
+  justify-self: end;
+}
+.main-nav ul {
+  display: flex;
+}
+.main-nav ul > *:not(:last-child) {
+  margin-inline-end: 0.75em;
+}
+.main-nav ul li a {
+  text-transform: uppercase;
+  color: var(--clr-bg);
+}

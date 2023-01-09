@@ -1,0 +1,79 @@
+/* flex helpers */
+
+.flex {
+  display: flex;
+}
+
+.flex.flex-column {
+  flex-direction: column;
+}
+
+.flex.justify-center {
+  justify-content: center;
+}
+
+.flex.justify-between {
+  justify-content: space-between;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+/* effects */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.fade-out {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+
+/* text helpers */
+
+.colored-text {
+  color: var(--clr1);
+}
+
+/* list helpers */
+
+.dirty-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: disc;
+}
+/* line clamp */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* font awsome */
+
+.fa {
+  font-family: fa;
+}
+
+.fa.fa-facebook::before {
+  content: "\f39e";
+}
+
+.fa.fa-twitter::before {
+  content: "\f099";
+}
+
+.fa.fa-dribbble::before {
+  content: "\f17d";
+}
+
+.fa.fa-behance::before {
+  content: "\f1b4";
+}

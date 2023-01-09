@@ -1,0 +1,60 @@
+/* for all buttons */
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--clr-txt);
+  outline: none;
+  border: none;
+  padding: 0.22em 0.88em;
+  font-weight: 400;
+  border-radius: var(--br-s);
+  transition: color 0.3s, background 0.3s;
+}
+button:hover {
+  background: var(--clrbg);
+  color: var(--clr-txt);
+}
+
+/* square-round btns */
+
+.btn-primary {
+  transition: color 0.3s, background 0.3s;
+  background-color: var(--clr1);
+  box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.3);
+}
+.btn-secondary {
+  background-color: var(--clrbg-light);
+}
+.btn-primary:hover {
+  background-color: var(--clr1-hover);
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+}
+
+/* circle-round btns */
+.btn-rnd-s {
+  background-color: var(--clrbg-light);
+}
+
+.btn-rnd-s,
+.btn-rnd-l {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3em;
+  padding: 0;
+}
+
+.btn-rnd-s {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn-rnd-l {
+  font-size: 1.15rem;
+  width: 3rem;
+  height: 3rem;
+}
