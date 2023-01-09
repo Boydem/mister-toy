@@ -11,6 +11,7 @@ export function PageHero() {
             molestias et, consequuntur eaque soluta aspernatur fuga ducimus nulla quae, beatae
             reprehenderit nostrum quia animi dolor praesentium.
           </p>
+          <button className='btn-outline'>Start shopping</button>
         </div>
         <div className='hero-img-container'>
           <img className='hero-img' src={heroImg} />

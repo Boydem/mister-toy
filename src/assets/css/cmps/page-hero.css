@@ -1,21 +1,32 @@
 .page-hero .wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(auto, 400px) auto;
   align-items: center;
+  place-items: center;
+  place-content: center;
 }
 .page-hero {
+  box-shadow: inset -50px -50px 100px -75px black, inset 10px 10px 250px -100px black;
   background-color: var(--clr-bg-con);
 }
 .hero-img {
-  margin: -2em;
+  max-width: 550px;
+  margin: auto;
   align-self: flex-end;
   filter: drop-shadow(20px 10px 20px rgba(0, 0, 0, 0.315));
 }
 .hero-img-container {
-  flex-basis: 60%;
+  text-align: end;
 }
 .hero-txt-container {
+  justify-self: end;
   padding: 1em;
-  flex-basis: 40%;
+}
+.hero-txt-container > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.hero-txt-container button {
+  margin-top: 0.25rem;
 }
 .page-hero .wrapper p {
   color: var(--clr-txt-con-m);

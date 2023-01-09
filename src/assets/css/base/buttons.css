@@ -18,6 +18,21 @@ button:hover {
 
 /* square-round btns */
 
+.btn-outline {
+  transition: color 0.2s 0s, border 0.2s 0s;
+  border-radius: 50em;
+  padding: 0.6em 1.8em;
+  border: 2px solid var(--clr1);
+  color: var(--clr1);
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.05em;
+}
+.btn-outline:hover {
+  border: 2px solid var(--clr-txt-con);
+  color: var(--clr-txt-con);
+}
+
 .btn-primary {
   transition: color 0.3s, background 0.3s;
   background-color: var(--clr1);

@@ -8,12 +8,21 @@
   grid-auto-flow: column;
   grid-template-columns: max-content 1fr;
   align-items: center;
-  margin: -1em auto;
+  /* margin: -1.5em auto; */
   padding: 0 2em;
+  padding: 1em 2em;
+  position: relative;
+}
+.logo-container {
+  /* position: relative; */
+  /* width: 140px; */
 }
 .app-logo {
-  height: 140px;
-  margin-bottom: -3em;
+  position: absolute;
+  top: -20%;
+  max-width: 140px;
+
+  margin: auto;
 }
 .app-logo {
   filter: drop-shadow(-5px 5px 5px rgba(0, 0, 0, 0.274));
@@ -29,5 +38,5 @@
 }
 .main-nav ul li a {
   text-transform: uppercase;
-  color: var(--clr-bg);
+  color: var(--clr-txt);
 }

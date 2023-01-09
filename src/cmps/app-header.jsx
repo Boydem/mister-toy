@@ -5,7 +5,7 @@ export function AppHeader() {
   return (
     <section className='app-header full main-layout'>
       <div className='wrapper'>
-        <div className='logo'>
+        <div className='logo-container'>
           <img className='app-logo' src={logo} />
         </div>
         <nav className='main-nav'>
