@@ -11,10 +11,12 @@ export const SET_IS_LOADING = 'SET_IS_LOADING'
 
 // FILTERS
 export const SET_FILTER = 'SET_FILTER'
+export const SET_SORT = 'SET_SORT'
 
 const initialState = {
   toys: [],
   filterBy: toyService.getDefaultFilter(),
+  sortBy: toyService.getDefaultSort(),
   isLoading: false,
   lastRemovedToy: null,
   lastUpdatedToy: null,
@@ -57,6 +59,9 @@ export function toyReducer(state = initialState, action) {
     // Filter
     case SET_FILTER:
       return { ...state, filterBy: action.filterBy }
+    // Sort
+    case SET_SORT:
+      return { ...state, sortBy: action.sortBy }
 
     //   Defalut
     default:

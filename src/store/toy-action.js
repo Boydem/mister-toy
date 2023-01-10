@@ -7,6 +7,7 @@ import {
   ADD_TOY,
   UPDATE_TOY,
   SET_FILTER,
+  SET_SORT,
   SET_IS_LOADING,
   UNDO_REMOVE_TOY,
   UNDO_UPDATE_TOY,
@@ -56,4 +57,8 @@ export function removeToy(toyId) {
     console.log('Had issues Removing toy', err)
     throw err
   })
+}
+
+export function setSort(sortBy) {
+  store.dispatch({ type: SET_SORT, sortBy })
 }

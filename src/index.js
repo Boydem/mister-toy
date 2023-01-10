@@ -1,7 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
+import { HashRouter as Router } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
+import { App } from './root-cmp.jsx'
+import './assets/css/main.css'
 
-import { App } from './root-cmp';
-
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<App />)
+const container = document.getElementById('root')
+const root = createRoot(container)
+root.render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>
+)

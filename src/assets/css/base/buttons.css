@@ -18,26 +18,47 @@ button:hover {
 
 /* square-round btns */
 
-.btn-primary {
+.btn-hero {
   transition: color 0.2s 0s, background 0.2s 0s;
   border-radius: 50em;
   padding: 0.6em 1.8em;
   background: var(--clr1);
   color: var(--clr-bg-con);
   font-weight: 600;
-  /* text-transform: uppercase; */
+
   letter-spacing: 0.05em;
 }
-.btn-primary:hover {
+.btn-hero:hover {
   background: var(--clr1-hover);
   color: var(--clr-bg-con);
 }
+.btn-outline {
+  transition: color 0.2s 0s, background 0.2s 0s;
+  border-radius: 0.5em;
+  padding: 0.3em 1.2em;
+  background: var(--clrbg);
+  border: 1px solid var(--clr1);
+  background: var(--clrbg);
+}
 
+.btn-outline:hover {
+  background: var(--clr1-hover);
+}
+.btn-primary {
+  transition: color 0.2s 0s, background 0.2s 0s;
+  border-radius: 0.5em;
+  padding: 0.3em 1.2em;
+  background: var(--clrbg);
+  border: 1px solid var(--clr1);
+  background: var(--clr1-hover);
+}
+
+.btn-primary:hover {
+  /* background-color: var(--clr1-hover); */
+  background: var(--clr1);
+}
 .btn-secondary {
   background-color: var(--clrbg-light);
-}
-.btn-primary:hover {
-  background-color: var(--clr1-hover);
 }
 
 .btn-secondary:hover {

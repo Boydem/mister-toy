@@ -1,10 +1,14 @@
-import { userService } from './user.service.js'
 import { utilService } from './util.service.js'
 import { localStorageService } from './storage.service.js'
 import { storageService } from './async-storage.service.js'
 
+import { httpService } from './http.service.js'
+
+const BASE_URL = 'toy/'
 const TOY_KEY = 'toyDB'
+
 _createToys()
+
 export const toyService = {
   query,
   get,
@@ -12,20 +16,20 @@ export const toyService = {
   save,
   getEmptyToy,
   getDefaultFilter,
+  getDefaultSort,
 }
 
-const labels = [
-  'On wheels',
-  'Box game',
-  'Art',
-  'Baby',
-  'Doll',
-  'Puzzle',
-  'Outdoor',
-  'Battery Powered',
-]
+function getDefaultSort() {
+  return { title: false, price: false, createdAt: false }
+}
 
-function getEmptyToy(name = 'Unnamed Toy', price = 123, labels, inStock = true, imgUrl) {
+function getEmptyToy(
+  name = 'Unnamed Toy',
+  price = 123,
+  labels = ['Baby', 'Art'],
+  inStock = true,
+  imgUrl = '15.png'
+) {
   return {
     name,
     price,
@@ -36,21 +40,13 @@ function getEmptyToy(name = 'Unnamed Toy', price = 123, labels, inStock = true, 
 }
 
 function getDefaultFilter() {
-  return { txt: '', label: '' }
+  return { txt: '', labels: [] }
 }
 
 function query(filterBy = getDefaultFilter()) {
-  return storageService.query(TOY_KEY).then((toys) => {
-    if (filterBy.txt) {
-      const regex = new RegExp(filterBy.txt, 'i')
-      toys = toys.filter((toy) => regex.test(toy.txt))
-    }
-    if (filterBy.label) {
-      // TODO : comple support label filtering
-      toys = toys.filter((toy) => toy.labels.includes(filterBy.labels))
-    }
-    return toys
-  })
+  // const queryParams = `?txt=${filterBy.txt}&labels=${filterBy.labels}`
+  // return httpService.get(BASE_URL + queryParams)
+  return storageService.query(TOY_KEY).then((toys) => toys)
 }
 
 function get(toyId) {

@@ -1,0 +1,38 @@
+.more-info > *:not(:last-child) {
+  margin-bottom: 0.25em;
+}
+.toy-details .txt-container > *:not(:first-child, :last-child) {
+  margin-bottom: 0.5em;
+}
+.more-info p .tag {
+  margin-inline-end: 0.35em;
+}
+.img-container {
+  position: relative;
+}
+.toy-actions {
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  transition: 0.15s all;
+  z-index: 2;
+}
+.toy-actions > *:not(:last-child) {
+  margin-inline-end: 0.35em;
+}
+.img-container:hover .toy-actions {
+  opacity: 1;
+  transition: 0.3s 0.15s all;
+  /* top: ; */
+}
+.img-container img {
+  transition: 0.3s filter;
+}
+.img-container:hover img {
+  filter: brightness(40%);
+}

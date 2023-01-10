@@ -7,6 +7,7 @@
   /* align-items: center; */
   justify-content: center;
   position: relative;
+  background-color: #fff;
 }
 .toy-prev-meta {
   padding: 0 1em;
@@ -23,10 +24,10 @@
   flex-wrap: wrap;
   gap: 0.25em;
 }
-/* .toy-prev-labels .tag
-.tag {
-  background-color: ;
-} */
+
+.add-toy-placeholder {
+}
+
 .tag.label {
   bottom: 0;
   top: unset;
@@ -36,6 +37,12 @@
   position: absolute;
   right: 0;
   top: 0;
-  background-color: green;
+
   color: white;
+}
+.tag.stock.success {
+  background-color: green;
+}
+.tag.stock.danger {
+  background-color: rgb(207, 76, 15);
 }

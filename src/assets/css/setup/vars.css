@@ -1,11 +1,11 @@
 :root {
   --clr-bg: #f7f4f1;
-  --clr-bg-con: #15a9c7;
+  --clr-bg-con: #0a5cb9;
   --clr-txt: #111;
   --clr-txt-m: #777;
   --clr-txt-con: #fafafa;
   --clr-txt-con-m: #dfdfdf;
 
-  --clr1: #ffd000;
-  --clr1-hover: #ffe77c;
+  --clr1: #ffc919;
+  --clr1-hover: #ffec98;
 }

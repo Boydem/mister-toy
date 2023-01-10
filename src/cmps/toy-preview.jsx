@@ -15,7 +15,9 @@ export function ToyPreview({ toy }) {
           ))}
         </div>
       )}
-      <span className='tag stock'>{toy.inStock ? 'In stock' : 'Out of stock'}</span>
+      <span className={`tag stock ${toy.inStock ? 'success' : 'danger'}`}>
+        {toy.inStock ? 'In stock' : 'Out of stock'}
+      </span>
     </article>
   )
 }

@@ -1,0 +1,19 @@
+.toy-filter {
+  max-width: 900px;
+  margin: auto;
+  padding: 1em;
+}
+.btn-filter-label {
+  background-color: var(--clr1);
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+.btn-filter-label:hover {
+}
+.toy-filter .labels {
+  display: flex;
+  margin: 1em 0;
+}
+.toy-filter .labels > * {
+  margin-inline-start: 0.5em;
+}

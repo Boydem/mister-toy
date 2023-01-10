@@ -1,0 +1,16 @@
+.toy-edit .edit-container label {
+  max-width: 500px;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.toy-edit .edit-container label input {
+  /* margin-inline-start: 2em; */
+  max-width: 300px;
+}

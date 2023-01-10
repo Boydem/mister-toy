@@ -1,0 +1,33 @@
+.main-layout > .main-container {
+  margin: 6em auto 0;
+  /* border: 1px solid var(--clr1); */
+  /* background: var(--clr1); */
+  color: var(--clr-txt);
+  /* padding: 5em auto; */
+  border-radius: 1em;
+
+  min-height: 50vh;
+}
+.main-layout > .main-container > * {
+  padding: 1em;
+}
+
+.toy-details > .main-container {
+  display: grid;
+  grid-template-columns: 333px 1fr;
+
+  padding: 2em;
+  place-content: center;
+}
+.toy-details .details-btns {
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+}
+.toy-details .main-container > .img-container {
+  grid-row: 2;
+  grid-column: 1/2;
+}
+.toy-details .main-container > .txt-container {
+  grid-row: 2;
+  grid-column: 2/3;
+}
