@@ -40,11 +40,6 @@ export function ToyEdit() {
   return (
     <section className='toy-details toy-edit main-layout'>
       <div className='main-container'>
-        <div className='details-btns'>
-          <button onClick={saveToy} className='btn-primary'>
-            Save
-          </button>
-        </div>
         <div className='img-container'>
           {}
           <img
@@ -85,6 +80,9 @@ export function ToyEdit() {
               defaultChecked={toyToEdit?.inStock}
             />
           </label>
+          <button style={{ marginTop: 'auto' }} onClick={saveToy} className='btn-primary'>
+            Save
+          </button>
         </div>
       </div>
     </section>

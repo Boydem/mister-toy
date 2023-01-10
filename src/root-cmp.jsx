@@ -4,6 +4,7 @@ import { ToyIndex } from './views/toy-index'
 
 import { ToyDetails } from './views/toy-details'
 import { ToyEdit } from './views/toy-edit'
+import { ToyDashboard } from './views/toy-dashboard'
 
 export function App() {
   return (
@@ -16,7 +17,7 @@ export function App() {
           <Route element={<ToyEdit />} path='/toy/edit' />
           {/* <Route path='/user' element={<UserProfile />} /> */}
           <Route path='/toy' element={<ToyIndex />} />
-          <Route path='/' element={<ToyIndex />} />
+          <Route path='/' element={<ToyDashboard />} />
         </Routes>
       </main>
     </section>

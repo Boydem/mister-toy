@@ -36,3 +36,22 @@
 .img-container:hover img {
   filter: brightness(40%);
 }
+
+/* MAIN PAGE CONTAINER */
+.toy-details > .main-container {
+  display: flex;
+  padding: 2em;
+  max-width: max-content;
+  inset: 0;
+  position: absolute;
+  margin: auto;
+  max-height: max-content;
+}
+
+.toy-details .img-container {
+}
+.toy-details .txt-container {
+  padding: 0 3em;
+  display: flex;
+  flex-direction: column;
+}

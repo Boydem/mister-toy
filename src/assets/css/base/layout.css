@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 .main-layout > *:not(.full) {
-  max-width: 1800px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;

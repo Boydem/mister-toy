@@ -27,11 +27,6 @@ export function ToyDetails() {
   return (
     <section className='toy-details main-layout'>
       <div className='main-container'>
-        <div className='details-btns'>
-          <button onClick={() => navigate('/toy')} className='btn-outline'>
-            Back
-          </button>
-        </div>
         <div className='img-container'>
           <div className='toy-actions'>
             <button onClick={() => navigate(`/toy/edit/${toy._id}`)} className='btn-primary'>
@@ -48,7 +43,7 @@ export function ToyDetails() {
         <div className='txt-container'>
           <h2 className='t-details-name'>{toy.name}</h2>
 
-          <h4 className='t-details-price'>{toy.price}</h4>
+          <h4 className='t-details-price'>${toy.price}</h4>
 
           <section className='more-info'>
             <p>
@@ -68,6 +63,12 @@ export function ToyDetails() {
               Stock status: <span>{toy.inStock ? 'In stock' : 'Out of stock'}</span>
             </p>
           </section>
+          <button
+            style={{ marginTop: 'auto' }}
+            onClick={() => navigate('/toy')}
+            className='btn-primary'>
+            Back
+          </button>
         </div>
       </div>
     </section>
